@@ -2,21 +2,21 @@ package com.example.application.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
+@Table(name = "Person")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    Long id;
-    String name;
-    int age;
+    @Column (name = "id")
+    private Long id;
+    @Column (name = "name")
+    private String name;
+    @Column (name = "age")
+    private int age;
 
     public Person(String name, int age) {
         this.name = name;
