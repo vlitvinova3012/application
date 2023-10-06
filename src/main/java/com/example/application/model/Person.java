@@ -7,10 +7,10 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Data
-@Table(name = "Person")
+@Table(name = "person")
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "id")
     private Long id;
     @Column (name = "name")
@@ -22,4 +22,5 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
 }

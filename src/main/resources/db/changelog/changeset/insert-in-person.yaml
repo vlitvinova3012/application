@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-person-table
+      author: vlitvinova
+      changes:
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 1
+              - column:
+                  name: name
+                  value: Ivan
+              - column:
+                  name: age
+                  valueNumeric: 32
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 2
+              - column:
+                  name: name
+                  value: Petr
+              - column:
+                  name: age
+                  valueNumeric: 34
